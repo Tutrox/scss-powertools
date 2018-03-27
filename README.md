@@ -1,4 +1,6 @@
 # scss-powertools :zap:
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Tutrox/scss-powertools.svg)](https://greenkeeper.io/)
 Lint, compile, prefix and minify¹ SCSS using one command!
 
 ## Installation
