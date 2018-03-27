@@ -1,0 +1,7 @@
+//This file is used in unit tests to check that every step succeeds
+$var: 2px;
+
+body {
+  /* Only unminified */
+  height: $var;
+}
