@@ -40,6 +40,36 @@ Currently there are two options. These should **not** be combined.
 -m or --minify     => Minify the output CSS, even though you are on dev enviroment
 ```
 
+## Cool features
+
+### SCSS imports can resolve to the `node_modules` folder
+
+Did you write your imports like this earlier?
+
+```
+@import "node_modules/bootstrap";
+```
+
+No need to, anymore. Just write:
+
+```
+@import "bootstrap";
+```
+
+Easy!
+
+### Use in your CI-enviroment
+
+Running `scss-powertools` in your CI is easy. Just make sure to include the **`--production`** flag. It will make sure that your CI build will error if anything happens (like a lint issue).
+
+### No config needed
+
+`scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can find them in [`powertools.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/powertools.js).
+
+#### Custom config?
+
+There's always someone who wants to do some custom configuring. Keep in mind that `scss-powertools` is made to be really simple and fast to get up and running, and therefore isn't super-configurable! However you can config your lint as you normally config `stylelint`. Just create a `.stylelintrc` file and put your config in there.
+
 ---
 
 ¹Only in production
