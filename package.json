@@ -1,6 +1,6 @@
 {
   "name": "scss-powertools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lint, compile, prefix and minify SCSS using one command!",
   "main": "./lib/powertools.js",
   "bin": "./lib/cli.js",
