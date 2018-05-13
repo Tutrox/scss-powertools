@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Lint, compile, prefix and minify SCSS using one command!",
   "main": "./lib/powertools.js",
+  "engines": {
+    "node": ">=7"
+  },
   "bin": "./lib/cli.js",
   "scripts": {
     "test": "npm run lint",
