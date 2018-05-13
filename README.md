@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/Tutrox/scss-powertools.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
 
-Lint, compile, prefix and minify¹ SCSS using one command!
+Lint, prefix, compile and minify¹ SCSS using one command!
 
 ## Installation
 ### As a development dependency
@@ -21,7 +21,7 @@ _or_
 ## Usage
 **scss-powertools is made really simple**, and only consists of one command:
 
-```
+```bash
 scss-powertools <input> <output> [options]
 ```
 
@@ -50,17 +50,48 @@ Currently there are three options. `--production` and `--separate` **can be** co
 
 Did you write your imports like this earlier?
 
-```
+```scss
 @import "node_modules/bootstrap";
 ```
 
 No need to, anymore. Just write:
 
-```
+```scss
 @import "bootstrap";
 ```
 
 Easy!
+
+### Running tests with NPM
+
+`npm run x` allows us to add flags to a command, so running test commands from existing commands is easy. Check this example `package.json`:
+
+```diff
+{
+  "name": "scss-superpackage",
+  "description": "The awesome stylesheet collection",
+  "version": "1.0.0",
+  "scripts": {
++   "test": "npm run build -- --production",
++   "build": "scss-powertools scss/style.scss build/done.css"
+  }
+}
+```
+
+Or with [`npm-run-all`](https://www.npmjs.com/package/npm-run-all):
+
+```diff
+{
+  "name": "scss-superpackage",
+  "description": "The awesome stylesheet collection",
+  "version": "1.0.0",
+  "scripts": {
++   "test": "npm-run-all build:* -- --production",
++   "build:styles": "scss-powertools scss/style.scss build/done.css",
++   "build:otherstyles": "scss-powertools scss/other.scss build/other_done.css"
+  }
+}
+```
 
 ### Use in your CI-enviroment
 
@@ -76,4 +107,4 @@ There's always someone who wants to do some custom configuring. Keep in mind tha
 
 ---
 
-¹Only in production
+¹Only in production or using `--minify`
