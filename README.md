@@ -32,13 +32,16 @@ scss-powertools scss/app.scss dist/styles.css
 ```
 
 #### Options
-Currently there are two options. These should **not** be combined.
+Currently there are three options. `--production` and `--separate` **can be** combined. `--minify` **should not** be combined with any other option.
 
 ```
 -p or --production => Minify the output CSS,
                       disable source maps and ERROR (non-zero exit code)
                       if any issues, like linting issues (use on your CI)
 -m or --minify     => Minify the output CSS, even though you are on dev enviroment
+-s or --separate   => Creates both an unminified and a minified file, the unminified
+                      file will be named x.css when the minified will be named x.min.css
+                      X is the name that you have configured as output
 ```
 
 ## Cool features
