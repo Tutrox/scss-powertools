@@ -32,7 +32,7 @@ scss-powertools scss/app.scss dist/styles.css
 ```
 
 #### Options
-Currently there are two options. These should **not** be combined.
+Currently there are three options. `--production` and `--separate` **can be** combined. `--minify` **should not** be combined with any other option.
 
 ```
 -p or --production => Minify the output CSS,
