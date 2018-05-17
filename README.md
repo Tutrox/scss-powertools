@@ -99,7 +99,7 @@ Running `scss-powertools` in your CI is easy. Just make sure to include the **`-
 
 ### No config needed
 
-`scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can find them in [`powertools.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/powertools.js).
+`scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can find the configuration in the [`util.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/util.js) functions.
 
 #### Custom config?
 
