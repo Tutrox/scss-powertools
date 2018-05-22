@@ -121,7 +121,7 @@ Running `scss-powertools` in your CI is easy. Just make sure to include the **`-
 
 #### Custom config?
 
-There's always someone who wants to do some custom configuring. Keep in mind that `scss-powertools` is made to be really simple and fast to get up and running, and therefore isn't super-configurable! However you can config your lint as you normally config `stylelint`. Just create a `.stylelintrc` file and put your config in there.
+There's always someone who wants to do some custom configuring. Keep in mind that `scss-powertools` is made to be really simple and fast to get up and running, and therefore isn't super-configurable! Stylelint config is in [consideration](https://github.com/Tutrox/scss-powertools/issues/24).
 
 ---
 
