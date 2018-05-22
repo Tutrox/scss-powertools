@@ -42,9 +42,27 @@ Currently there are three options. `--production` and `--separate` **can be** co
 -s or --separate   => Creates both an unminified and a minified file, the unminified
                       file will be named x.css when the minified will be named x.min.css
                       X is the name that you have configured as output
+-d or --directory  => Specify the output directory for the compiled CSS files.
+                      Use this when processing multiple files at a time.
+                      In this case you cannot set the output parameter, the
+                      CSS name will be generated from the input file name.
 ```
 
-## Cool features
+## Cool features and bonuses
+
+### Process multiple files and use globs
+
+You can easily process multiple SCSS files by separating them with a comma (`,`) or use globs.
+In these cases you **cannot** set output file names, but you should set the output directory with `--output`.
+
+```bash
+scss-powertools scss/app.scss,scss/secret.scss --directory dist
+```
+
+```bash
+# Put the glob inside single quotes or bad things will happen
+scss-powertools 'scss/*.scss' --directory dist
+```
 
 ### SCSS imports can resolve to the `node_modules` folder
 
