@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Tutrox/scss-powertools#readme",
   "dependencies": {
-    "autoprefixer": "^8.5.0",
+    "autoprefixer": "^8.6.2",
     "chalk": "^2.4.1",
     "clean-css": "^4.1.11",
     "commander": "^2.15.1",
@@ -38,7 +38,7 @@
     "node-sass": "^4.9.0",
     "pkginfo": "^0.4.1",
     "postcss": "^6.0.22",
-    "stylelint": "^9.2.1",
+    "stylelint": "^9.3.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.1.0"
