@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Tutrox/scss-powertools#readme",
   "dependencies": {
-    "autoprefixer": "^8.6.2",
+    "autoprefixer": "^9.0.0",
     "chalk": "^2.4.1",
     "clean-css": "^4.1.11",
     "commander": "^2.15.1",
