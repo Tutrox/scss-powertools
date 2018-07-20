@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/Tutrox/scss-powertools.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
 
-Lint, prefix, compile and minify¹ SCSS using one command!
+Lint, compile, prefix and minify¹ SCSS using one command!
 
 ## Installation
 ### As a development dependency
