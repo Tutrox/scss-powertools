@@ -5,6 +5,8 @@
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
+:star2: **Cool things incoming!** v2 will bring many changes and make the tool much more useful. It's being [developed](https://github.com/Tutrox/scss-powertools) right now.
+
 ## Installation
 ### As a development dependency
 
@@ -67,9 +69,6 @@ Running `scss-powertools` in your CI is easy. Just make sure to include the **`-
 
 `scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can find them in [`powertools.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/powertools.js).
 
-#### Custom config?
-
-There's always someone who wants to do some custom configuring. Keep in mind that `scss-powertools` is made to be really simple and fast to get up and running, and therefore isn't super-configurable! However you can config your lint as you normally config `stylelint`. Just create a `.stylelintrc` file and put your config in there.
 
 ---
 
