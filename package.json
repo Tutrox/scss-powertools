@@ -33,7 +33,7 @@
     "chalk": "^4.0.0",
     "clean-css": "^4.1.11",
     "commander": "^2.15.1",
-    "fs-extra": "^7.0.0",
+    "fs-extra": "^9.0.0",
     "globby": "^8.0.1",
     "node-sass": "^4.9.0",
     "pkginfo": "^0.4.1",
