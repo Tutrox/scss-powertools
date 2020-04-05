@@ -1,22 +1,19 @@
-# scss-powertools :zap:
+# scss-powertools :monorail:
 [![npm](https://img.shields.io/npm/v/scss-powertools.svg)](https://www.npmjs.com/package/scss-powertools)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Tutrox/scss-powertools.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
+:stars: _v2 is coming soon with optimizations and new features!_
+
 ## Installation
 ### As a development dependency
 
-`npm install scss-powertools --save-dev`
+`npm install scss-powertools -D`
 
 ### Use once (locally)
 
 `npx scss-powertools <input> <output> [options]` No install needed!
-
-_or_
-
-`npm install scss-powertools --global` For older versions of NPM.
 
 ## Usage
 **scss-powertools is made really simple**, and only consists of one command:
