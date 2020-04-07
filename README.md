@@ -1,10 +1,13 @@
 # scss-powertools :monorail:
 [![npm](https://img.shields.io/npm/v/scss-powertools.svg)](https://www.npmjs.com/package/scss-powertools)
 [![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Tutrox/scss-powertools)](https://dependabot.com)
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
 :stars: _v2 is coming soon with optimizations and new features!_
+
+**Docs for v1**: https://www.npmjs.com/package/scss-powertools
 
 ## Installation
 ### As a development dependency
