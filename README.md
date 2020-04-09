@@ -1,7 +1,5 @@
 # scss-powertools :zap:
 [![npm](https://img.shields.io/npm/v/scss-powertools.svg)](https://www.npmjs.com/package/scss-powertools)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Tutrox/scss-powertools.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
