@@ -1,68 +1,98 @@
 # scss-powertools :monorail:
 [![npm](https://img.shields.io/npm/v/scss-powertools.svg)](https://www.npmjs.com/package/scss-powertools)
-[![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Tutrox/scss-powertools)](https://dependabot.com)
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
-:stars: _v2 is coming soon with optimizations and new features!_
-
-**Docs for v1**: https://www.npmjs.com/package/scss-powertools
-
 ## Installation
+
 ### As a development dependency
 
 `npm install scss-powertools -D`
 
 ### Use once (locally)
 
-`npx scss-powertools <input> <output> [options]` No install needed!
+`npx scss-powertools <input> <output> [options]`
+
+No need to install separately!
 
 ## Usage
-**scss-powertools is made really simple**, and only consists of one command:
+
+**scss-powertools is made really simple to set up**, just type this to your terminal to compile your SCSS to a linted and prefixed CSS-file.
 
 ```bash
-scss-powertools <input> <output> [options]
+scss-powertools -i path/to/your.scss
 ```
 
-`input (SCSS)` and `output (CSS)` are references to your input SCSS and output CSS, relative to your project root (or where the command is run). If you have your SCSS in `scss/app.scss` and want to output to `dist/styles.css`, your command will look like:
+You'll see a new file (in this case `path/to/your`**`.css`**).
 
-```
-scss-powertools scss/app.scss dist/styles.css
-```
-
-#### Options
-Currently there are three options. `--production` and `--separate` **can be** combined. `--minify` **should not** be combined with any other option.
-
-```
--p or --production => Minify the output CSS,
-                      disable source maps and ERROR (non-zero exit code)
-                      if any issues, like linting issues (use on your CI)
--m or --minify     => Minify the output CSS, even though you are on dev enviroment
--s or --separate   => Creates both an unminified and a minified file, the unminified
-                      file will be named x.css when the minified will be named x.min.css
-                      X is the name that you have configured as output
--d or --directory  => Specify the output directory for the compiled CSS files.
-                      Use this when processing multiple files at a time.
-                      In this case you cannot set the output parameter, the
-                      CSS name will be generated from the input file name.
-```
-
-## Cool features and bonuses
-
-### Process multiple files and use globs
-
-You can easily process multiple SCSS files by separating them with a comma (`,`) or use globs.
-In these cases you **cannot** set output file names, but you should set the output directory with `--output`.
+---
+You can also specify your output file:
 
 ```bash
-scss-powertools scss/app.scss,scss/secret.scss --directory dist
+scss-powertools -i path/to/your.scss -o path/to/my.css
 ```
 
+---
+When you want to get your CSS minified, use the production mode:
+
 ```bash
-# Put the glob inside single quotes or bad things will happen
-scss-powertools 'scss/*.scss' --directory dist
+scss-powertools -i path/to/your.scss -p
 ```
+
+When you're in production mode, all errors, including lint-warnings will result in a **non-zero exit code**.
+
+---
+
+### All options, listed
+
+```
+Required:
+-i => path to input SCSS
+      default: none
+      example: folder/some.scss
+
+Optional:
+-o => path to output CSS
+      default: same as input, but with .css extension
+      example: folder/my.css
+-p => Production. Minify. All errors result in a non-zero exit code.
+      default: disabled
+-c => Fetch config from file, see details below
+      default: disabled
+
+```
+
+## Want to do some advanced config?
+
+Ok, that's easy to set up as well:
+
+Create a `.powertoolsrc`-file. Format it like this:
+
+```json
+{
+  "input": "path/to/input.scss",
+  "output": "path/to/output.css",
+  "steps": {
+    "lint": true,
+    "prefix": true,
+    "minify": true,
+    "write": true
+  }
+}
+```
+
+Run the powertools like this:
+
+```bash
+scss-powertools -c
+```
+
+## So, why should I use `scss-powertools`?
+
+### No config needed
+
+`scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings.
 
 ### SCSS imports can resolve to the `node_modules` folder
 
@@ -78,9 +108,9 @@ No need to, anymore. Just write:
 @import "bootstrap";
 ```
 
-Easy!
+That looks great!
 
-### Running tests with NPM
+### Easy to integrate with `package.json` and NPM tests
 
 `npm run x` allows us to add flags to a command, so running test commands from existing commands is easy. Check this example `package.json`:
 
@@ -90,23 +120,9 @@ Easy!
   "description": "The awesome stylesheet collection",
   "version": "1.0.0",
   "scripts": {
-+   "test": "npm run build -- --production",
-+   "build": "scss-powertools scss/style.scss build/done.css"
-  }
-}
-```
-
-Or with [`npm-run-all`](https://www.npmjs.com/package/npm-run-all):
-
-```diff
-{
-  "name": "scss-superpackage",
-  "description": "The awesome stylesheet collection",
-  "version": "1.0.0",
-  "scripts": {
-+   "test": "npm-run-all build:* -- --production",
-+   "build:styles": "scss-powertools scss/style.scss build/done.css",
-+   "build:otherstyles": "scss-powertools scss/other.scss build/other_done.css"
+-   "test": "scss-powertools -i my/file.scss -p",
++   "test": "npm run build -- -p",
+    "build": "scss-powertools -i my/file.scss"
   }
 }
 ```
@@ -115,14 +131,6 @@ Or with [`npm-run-all`](https://www.npmjs.com/package/npm-run-all):
 
 Running `scss-powertools` in your CI is easy. Just make sure to include the **`--production`** flag. It will make sure that your CI build will error if anything happens (like a lint issue).
 
-### No config needed
-
-`scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can find the configuration in the [`util.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/util.js) functions.
-
-#### Custom config?
-
-There's always someone who wants to do some custom configuring. Keep in mind that `scss-powertools` is made to be really simple and fast to get up and running, and therefore isn't super-configurable! Stylelint config is in [consideration](https://github.com/Tutrox/scss-powertools/issues/24).
-
 ---
 
-¹Only in production or using `--minify`
+¹Only in production!
