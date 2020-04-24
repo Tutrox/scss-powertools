@@ -4,4 +4,5 @@ $var: blue;
 p {
   /* Only unminified */
   color: $var;
+  user-select: none;
 }
