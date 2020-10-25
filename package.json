@@ -32,7 +32,7 @@
     "autoprefixer": "^9.0.0",
     "chalk": "^4.0.0",
     "clean-css": "^4.1.11",
-    "commander": "^5.0.0",
+    "commander": "^6.2.0",
     "fs-extra": "^9.0.0",
     "globby": "^11.0.0",
     "node-sass": "^4.9.0",
