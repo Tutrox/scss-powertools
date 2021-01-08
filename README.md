@@ -3,7 +3,11 @@
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
-:star2: **Cool things incoming!** v2 will bring many changes and make the tool much more useful. It's being [developed](https://github.com/Tutrox/scss-powertools) right now.
+## The future of this package
+
+Please read the article at https://klooven.link/powertools.
+
+---
 
 ## Installation
 ### As a development dependency
