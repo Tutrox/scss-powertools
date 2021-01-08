@@ -1,0 +1,7 @@
+//This is for multiprocessing test
+$var: blue;
+
+p {
+  /* Only unminified */
+  color: $var;
+}
