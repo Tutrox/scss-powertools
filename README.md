@@ -9,21 +9,19 @@ Please read the article at https://klooven.link/powertools.
 
 ---
 
-## Installation
+## Setup
+
 ### As a development dependency
 
 `npm install scss-powertools --save-dev`
 
-### Use once (locally)
+### Use without installing
 
 `npx scss-powertools <input> <output> [options]` No install needed!
 
-_or_
-
-`npm install scss-powertools --global` For older versions of NPM.
-
 ## Usage
-**scss-powertools is made really simple**, and only consists of one command:
+
+**scss-powertools is made really simple to use**, and only consists of one command:
 
 ```
 scss-powertools <input> <output> [options]
@@ -36,13 +34,14 @@ scss-powertools scss/app.scss dist/styles.css
 ```
 
 #### Options
+
 Currently there are two options. These should **not** be combined.
 
 ```
 -p or --production => Minify the output CSS,
-                      disable source maps and ERROR (non-zero exit code)
-                      if any issues, like linting issues (use on your CI)
--m or --minify     => Minify the output CSS, even though you are on dev enviroment
+                      disable source maps and error (non-zero exit code)
+                      if any issues, like linting issues occur (use on your CI)
+-m or --minify     => Minify the output CSS, even though you are on dev environment
 ```
 
 ## Cool features
@@ -63,7 +62,7 @@ No need to, anymore. Just write:
 
 Easy!
 
-### Use in your CI-enviroment
+### Use in your CI-environment
 
 Running `scss-powertools` in your CI is easy. Just make sure to include the **`--production`** flag. It will make sure that your CI build will error if anything happens (like a lint issue).
 
@@ -74,4 +73,4 @@ Running `scss-powertools` in your CI is easy. Just make sure to include the **`-
 
 ---
 
-¹Only in production
+¹Only when enabled
