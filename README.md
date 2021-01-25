@@ -1,5 +1,7 @@
 # scss-powertools :zap:
-[![npm](https://img.shields.io/npm/v/scss-powertools.svg)](https://www.npmjs.com/package/scss-powertools)
+[![npm package](https://img.shields.io/npm/v/scss-powertools.svg)](https://www.npmjs.com/package/scss-powertools)
+[![dependency updates available](https://img.shields.io/github/issues-pr-raw/Tutrox/scss-powertools/dependencies?label=dependency%20updates%20available)](https://github.com/Tutrox/scss-powertools/pulls?q=is%3Apr+is%3Aopen+label%3Adependencies)
+[![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
@@ -17,7 +19,7 @@ Please read the article at https://klooven.link/powertools.
 
 ### Use without installing
 
-`npx scss-powertools <input> <output> [options]` No install needed!
+`npx scss-powertools <input> <output> [options]`
 
 ## Usage
 
@@ -60,11 +62,11 @@ No need to, anymore. Just write:
 @import "bootstrap";
 ```
 
-Easy!
+Simple!
 
 ### Use in your CI-environment
 
-Running `scss-powertools` in your CI is easy. Just make sure to include the **`--production`** flag. It will make sure that your CI build will error if anything happens (like a lint issue).
+Running `scss-powertools` in your CI is easy. Just make sure to include the **`--production`** flag. It will make sure that your CI build will error if anything bad happens (like a lint issue).
 
 ### No config needed
 
