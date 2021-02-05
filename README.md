@@ -15,27 +15,31 @@ Please read the article at https://klooven.link/powertools.
 
 ### As a development dependency
 
-`npm install scss-powertools --save-dev`
+```bash
+npm install scss-powertools --save-dev
+```
 
 ### Use without installing
 
-`npx scss-powertools <input> <output> [options]`
+```bash
+npx scss-powertools <input> <output> [options]
+```
 
 ## Usage
 
 **scss-powertools is made really simple to use**, and only consists of one command:
 
-```
+```bash
 scss-powertools <input> <output> [options]
 ```
 
-`input (SCSS)` and `output (CSS)` are references to your input SCSS and output CSS, relative to your project root (or where the command is run). If you have your SCSS in `scss/app.scss` and want to output to `dist/styles.css`, your command will look like:
+`input` (SCSS) and `output` (CSS) are references to your input SCSS and output CSS, relative to your project root (or where the command is run). If you have your SCSS in `scss/app.scss` and want to output to `dist/styles.css`, your command will look like:
 
-```
+```bash
 scss-powertools scss/app.scss dist/styles.css
 ```
 
-#### Options
+### Options
 
 Currently there are two options. These should **not** be combined.
 
@@ -52,13 +56,13 @@ Currently there are two options. These should **not** be combined.
 
 Did you write your imports like this earlier?
 
-```
+```scss
 @import "node_modules/bootstrap";
 ```
 
 No need to, anymore. Just write:
 
-```
+```scss
 @import "bootstrap";
 ```
 
@@ -70,8 +74,7 @@ Running `scss-powertools` in your CI is easy. Just make sure to include the **`-
 
 ### No config needed
 
-`scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can find them in [`powertools.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/powertools.js).
-
+`scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can check [`powertools.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/powertools.js) to learn more about how the tool works.
 
 ---
 
