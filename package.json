@@ -35,7 +35,7 @@
     "commander": "^7.0.0",
     "fs-extra": "^9.1.0",
     "lodash": "^4.17.20",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.0",
     "pkginfo": "^0.4.1",
     "postcss": "^8.2.4",
     "stylelint": "^13.9.0",
