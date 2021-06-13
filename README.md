@@ -1,7 +1,7 @@
 # scss-powertools :zap:
 [![npm package](https://img.shields.io/npm/v/scss-powertools.svg)](https://www.npmjs.com/package/scss-powertools)
 [![dependency updates available](https://img.shields.io/github/issues-pr-raw/Tutrox/scss-powertools/dependencies?label=dependency%20updates%20available)](https://github.com/Tutrox/scss-powertools/pulls?q=is%3Apr+is%3Aopen+label%3Adependencies)
-[![Build Status](https://travis-ci.org/Tutrox/scss-powertools.svg?branch=master)](https://travis-ci.org/Tutrox/scss-powertools)
+![lint status](https://github.com/Tutrox/scss-powertools/actions/workflows/lint/badge.svg)
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
