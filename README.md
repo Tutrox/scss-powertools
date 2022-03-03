@@ -5,27 +5,25 @@
 
 Lint, compile, prefix and minify¹ SCSS using one command!
 
-## The future of this package
+## Package unmaintained!
 
 Please read the article at https://klooven.link/powertools.
 
----
+### Setup
 
-## Setup
-
-### As a development dependency
+#### As a development dependency
 
 ```bash
 npm install scss-powertools --save-dev
 ```
 
-### Use without installing
+#### Use without installing
 
 ```bash
 npx scss-powertools <input> <output> [options]
 ```
 
-## Usage
+### Usage
 
 **scss-powertools is made really simple to use**, and only consists of one command:
 
@@ -50,9 +48,9 @@ Currently there are two options. These should **not** be combined.
 -m or --minify     => Minify the output CSS, even though you are on dev environment
 ```
 
-## Cool features
+### Cool features
 
-### SCSS imports can resolve to the `node_modules` folder
+#### SCSS imports can resolve to the `node_modules` folder
 
 Did you write your imports like this earlier?
 
@@ -68,11 +66,11 @@ No need to, anymore. Just write:
 
 Simple!
 
-### Use in your CI-environment
+#### Use in your CI-environment
 
 Running `scss-powertools` in your CI is easy. Just make sure to include the **`--production`** flag. It will make sure that your CI build will error if anything bad happens (like a lint issue).
 
-### No config needed
+#### No config needed
 
 `scss-powertools` does not need any config. Everything from linting to minifying is preconfigured using recommended settings. You can check [`powertools.js`](https://github.com/Tutrox/scss-powertools/blob/master/lib/powertools.js) to learn more about how the tool works.
 
